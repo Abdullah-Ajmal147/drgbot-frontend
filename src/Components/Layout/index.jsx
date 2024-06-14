@@ -1,16 +1,19 @@
 import React from 'react'
-import Header from '../Header'
-import Footer from '../Footer'
-import ScrollToTopButton from '../ScrollToTop'
-const Layout = ({ children, auth }) => {
+
+const Layout = ({ children }) => {
     return (
-        <div className='overflow-hidden'>
-            {!auth && <Header />}
+        <div className='overflow-hidden bg-black'>
+         
+        <img
+          src='/Assets/Images/logo.png'
+          alt='Description'
+          className='mx-auto my-5 w-auto h-14'
+        />
             <div className='container'>
+        
                 {children}
             </div>
-            <ScrollToTopButton />
-            {!auth && <Footer />}
+            
         </div>
     )
 }

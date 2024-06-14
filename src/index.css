@@ -16,13 +16,14 @@
 
 /* Defining theme colors and background */
 :root {
-    --theme-background: #F5F5F5;
-    --theme-red: #135682;
+    --theme-background: #fff;
+    
 }
 
 /* Setting body styles */
 body {
     background-color: var(--theme-background);
+    color: #FBDB4A;
    
 }
 
@@ -32,9 +33,9 @@ body {
 
 .container {
     margin: auto;
-    width: 90%;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 /* Setting heading styles */
@@ -124,19 +125,7 @@ input:-webkit-autofill::first-line {
 }
 
 /* Add hover effect to download button */
-.download-hover {
-    transition-duration: 0.2s;
-    cursor: pointer;
-}
 
-.download-hover:hover {
-    background-color: #CC1919;
-    color: #32230D;
-}
-
-.download-hover:hover path {
-    fill: #32230D;
-}
 
 .rotate-center {
     -webkit-animation: rotate-center 0.6s ease-in-out both;
@@ -228,40 +217,45 @@ input:-webkit-autofill::first-line {
         opacity: 1;
     }
 }
-
-.btn-animation {
-    position: relative;
-    overflow: hidden;
+.circle-container {
+    position: fixed;
+    top: 20%;
+    left: 55%;
+    width: 150px;
+    height: 150px;
+    margin-top: -50px;
+    margin-left: -100px;
+    animation: circular-motion 5s infinite linear;
+    -webkit-animation: circular-motion 5s infinite linear;
 }
-
-.btn-animation::after,
-.btn-animation::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-    z-index: 1;
-    transition-duration: 0.25s;
+  
+  @keyframes circular-motion {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(400px, 0);
+      -webkit-transform: translate(400px, 0);
+      -moz-transform: translate(400px, 0);
+      -ms-transform: translate(400px, 0);
+      -o-transform: translate(400px, 0);
 }
-
-.btn-animation::after {
-    background-color: #040209;
-    opacity: 0.2;
-    left: 100%;
+    50% {
+      transform: translate(400px, 100px);
+      -webkit-transform: translate(400px, 100px);
+      -moz-transform: translate(400px, 100px);
+      -ms-transform: translate(400px, 100px);
+      -o-transform: translate(400px, 100px);
 }
-
-.btn-animation::before {
-    background-color: #040209;
-    opacity: 0.2;
-    right: 100%;
+    75% {
+      transform: translate(0, 400px);
+      -webkit-transform: translate(0, 400px);
+      -moz-transform: translate(0, 400px);
+      -ms-transform: translate(0, 400px);
+      -o-transform: translate(0, 400px);
 }
-
-.btn-animation:hover::after {
-    left: 50%;
-}
-
-.btn-animation:hover::before {
-    right: 50%;
-}
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
