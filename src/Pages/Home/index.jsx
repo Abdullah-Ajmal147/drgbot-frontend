@@ -44,8 +44,9 @@ const Home = () => {
                                 
                             />
                             <button className='p-2 bg-white ml-3 rounded-sm'>
-                                <FontAwesomeIcon icon={faSearch} className='text-gray-800' />
-                            </button>
+    <img src='/Assets/Images/search.png' alt='Search' className='w-4 h-4 md:w-6 md:h-6' />
+</button>
+
                         </div>
                        
                     </>
