@@ -11,15 +11,12 @@ const Home = () => {
                 backgroundImage={'/Assets/Images/bg1.png'}
                 data={
                     <>
-                        <h2 className='font-extrabold md:text-[3rem] sm:text-[2.5rem] text-[2rem] leading-[1.2] '>
-                            Ask Anything
-                        </h2>
-
+                       
                         <ul className='mt-4'>
-                            <li className='flex font-semibold md:text-[2rem] sm:text-[1.5rem] text-[1.2rem] items-center'>
+                            <li className='flex font-bold md:text-[2rem] sm:text-[1.5rem] text-[1.2rem] items-center'>
                                 <FontAwesomeIcon icon={faArrowRight} className='text-#FBDB4A mr-4' />
                                 <a href='/' className='no-underline hover:underline text-current'>
-                                    Medical
+                                Ask Anything Medical
                                 </a>
                             </li>
                             <li className='flex font-semibold md:text-[2rem] sm:text-[1.5rem] text-[1.2rem] items-center'>

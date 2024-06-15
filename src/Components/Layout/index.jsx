@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
         <img
           src='/Assets/Images/logo.png'
           alt='Description'
-          className='mx-auto  my-5 w-auto h-40 '
+          className='mx-auto  my-3 w-auto h-40 '
         />
             <div className='container'>
         
