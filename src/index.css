@@ -257,4 +257,35 @@ input:-webkit-autofill::first-line {
       transform: translate(0, 0);
     }
   }
-  
+  span {
+    text-transform: capitalize;
+    font-weight: bold;
+    }
+    
+    .stories-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; gap: 4rem;}
+    .card {
+    min-width: 20rem;
+    width: 40vw;
+    padding: 4rem;
+    background-color: #ffffff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 0.5rem;
+    color: #15133c;
+    }
+
+.card-button {
+flex-direction: row;
+width: 100%;
+display: flex;
+justify-content: space-between;}
+.card-button a {
+color: #92b4ec;
+font-weight: 400;
+font-size: 1.2rem;}
+.card-button a:last-child {
+color: red;
+}
