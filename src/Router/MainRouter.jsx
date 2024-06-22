@@ -8,6 +8,7 @@ import Policies from "../Pages/Policies";
 import Feedback from "../Pages/Feedback";
 import FAQ from "../Pages/Faq";
 import EssentialPoints from "../Pages/EssentialPoints";
+import ContactUS from "../Pages/ContactUs";
 
 function MainRouter() {
   return (
@@ -21,6 +22,7 @@ function MainRouter() {
         <Route path="/essential-points" element={<EssentialPoints />} />
         <Route path="/feedback" element={<Feedback />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/contact-us" element={<ContactUS />} />
       </Routes>
     </Router>
   );

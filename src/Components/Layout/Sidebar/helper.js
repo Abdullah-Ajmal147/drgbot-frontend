@@ -30,6 +30,10 @@ const useSidebar = () => {
             url: '/faq',
             heading: 'FAQ',
         },
+        {
+            url: '/contact-us',
+            heading: 'Contact Us',
+        },
     ]
 
     // handle link click
