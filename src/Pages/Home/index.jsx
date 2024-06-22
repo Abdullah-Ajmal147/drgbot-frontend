@@ -11,7 +11,7 @@ const Home = () => {
     <Layout customContainer={"mx-auto w-[95%]"}>
       <Banner
         backgroundImage={"/Assets/Images/bg.png"}
-        customMargin={"sm:mx-5 mx-0"}
+        customMargin={"flex items-center justify-start md:pl-48 xs:pl-24 pl-4"}
         data={
           <>
             <ul className="mt-4">

@@ -30,6 +30,7 @@ const Stories = () => {
     // Remove extra </ul> tags and fix nested lists
     html = html.replace(/<\/ul><ul>/g, '');
     html = html.replace(/<\/li>\n<li>/g, '</li><li>');
+    html = html.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
 
     return html;
   }
@@ -48,10 +49,9 @@ const Stories = () => {
               message: { content },
               index,
             } = curPost;
-            let HTMLLLL = { __html: content }
             return (
               <div className="my-3" key={index}>
-                <div dangerouslySetInnerHTML={HTMLLLL} className="font-semibold md:text-2xl sm:text-xl text-lg text-white"></div>
+                <div dangerouslySetInnerHTML={{ __html: convertTextToHtml(content) }} className="font-semibold md:text-2xl sm:text-xl text-lg text-white"></div>
                 {/* <div className="font-semibold md:text-2xl sm:text-xl text-lg">
                 {parse(convertTextToHtml(`${content}`))}
               </div> */}
