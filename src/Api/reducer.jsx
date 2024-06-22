@@ -12,10 +12,11 @@ const reducer = (state, action) => {
         hits: action.payload,
       };
     case "REMOVE_POST":
+      console.log(state, action?.payload, "state")
       return {
         ...state,
-        hits: state.hits.filter(
-          (curElem) => curElem.objectID !== action.payload
+        hits: state?.hits?.hits?.filter(
+          (curElem) => curElem?.index !== action?.payload
         ),
       };
     case "SEARCH_QUERY":

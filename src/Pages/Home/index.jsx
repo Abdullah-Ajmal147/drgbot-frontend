@@ -7,9 +7,11 @@ import Banner from "../../Components/Common/Banner";
 
 const Home = () => {
   return (
-    <Layout>
+    <>
+    <Layout customContainer={"mx-auto w-[95%]"}>
       <Banner
         backgroundImage={"/Assets/Images/bg.png"}
+        customMargin={"sm:mx-5 mx-0"}
         data={
           <>
             <ul className="mt-4">
@@ -19,7 +21,7 @@ const Home = () => {
                   className="text-#FBDB4A mr-4"
                 />
                 <a
-                  href="/"
+                  // href="/"
                   className="no-underline hover:underline text-current"
                 >
                   Ask Anything Medical
@@ -31,7 +33,7 @@ const Home = () => {
                   className="text-#FBDB4A mr-4"
                 />
                 <a
-                  href="/"
+                  // href="/"
                   className="no-underline hover:underline text-current"
                 >
                   Educational
@@ -43,7 +45,7 @@ const Home = () => {
                   className="text-#FBDB4A mr-4"
                 />
                 <a
-                  href="/"
+                  // href="/"
                   className="no-underline hover:underline text-current"
                 >
                   Verify Info
@@ -55,7 +57,7 @@ const Home = () => {
                   className="text-#FBDB4A mr-4"
                 />
                 <a
-                  href="/"
+                  // href="/"
                   className="no-underline hover:underline text-current"
                 >
                   Not a Med Advice
@@ -66,7 +68,9 @@ const Home = () => {
         }
       />
       <Search></Search>
+      <h1 className="sm:text-[60px] text-[25px] text-[#4d4d4d] mx-auto w-[90%] text-center py-10">Advertisment Comming Soon</h1>
     </Layout>
+    </>
   );
 };
 

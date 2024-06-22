@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../../Api/context";
 
-const Search = () => {
+const Search = ({ customMargin }) => {
   const { query, searchPost, clearQuery, onSearchQuery } = useGlobalContext();
   const navigate = useNavigate();
   const [error, setError] = useState("");
@@ -15,7 +15,7 @@ const Search = () => {
     }
     setError("");
     onSearchQuery();
-    navigate("/Stories");
+    navigate("/chat");
     clearQuery(); // Clear the input value after navigating
   };
 
@@ -25,13 +25,12 @@ const Search = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="d-flex align-items-center m-5">
+      <div className={`flex items-center ${customMargin ? customMargin : "m-5"}`}>
         <input
           type="text"
           placeholder="Ask Anything Medical"
-          className={`form-control me-3 bg-transparent text-white placeholder-white ${
-            error ? "border border-danger" : ""
-          }`}
+          className={`form-control me-3 bg-transparent text-white placeholder-white ${error ? "border border-danger" : ""
+            }`}
           value={query}
           onChange={(e) => searchPost(e.target.value)}
         />
