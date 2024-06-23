@@ -2,7 +2,7 @@ import React from 'react'
 import useSidebar from './helper'
 
 const Sidebar = ({ toggle, setToggle }) => {
-    const { sidebarRoutes, handleLinkClick, is_active_route } = useSidebar()
+    const { sidebarRoutes, handleLinkClick, is_active_route, handleEmailClick } = useSidebar()
 
     return (
         <>
@@ -30,7 +30,17 @@ const Sidebar = ({ toggle, setToggle }) => {
                                         </li>
                                     )
                                 })}
-
+                                <li>
+                                    <button
+                                        onClick={handleEmailClick}
+                                        type="button"
+                                        className={`flex items-center p-1 md:p-3 w-full text-sm rounded-lg transition duration-75`}
+                                    >
+                                        <a href="#email" onClick={handleEmailClick} className="text-white flex-1 ml-3 font-medium text-left whitespace-wrap">
+                                            Contact us
+                                        </a>
+                                    </button>
+                                </li>
                             </ul>
                         </div>
                     </div>

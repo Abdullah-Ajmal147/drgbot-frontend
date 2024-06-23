@@ -29,11 +29,7 @@ const useSidebar = () => {
         {
             url: '/faq',
             heading: 'FAQ',
-        },
-        {
-            url: '/contact-us',
-            heading: 'Contact Us',
-        },
+        }
     ]
 
     // handle link click
@@ -46,12 +42,21 @@ const useSidebar = () => {
             location.pathname.includes(`${url}`)
         ) {
             return true;
-        }else{
+        } else {
             return false;
         }
     };
+
+    const handleEmailClick = (e) => {
+        e.preventDefault(); // Prevent default link behavior
+        const email = 'DrGMedicalBot@gmail.com';
+        const subject = '';
+        const body = '';
+
+        window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    };
     return {
-        navigate, sidebarRoutes, handleLinkClick, is_active_route
+        navigate, sidebarRoutes, handleLinkClick, is_active_route, handleEmailClick
     }
 }
 
