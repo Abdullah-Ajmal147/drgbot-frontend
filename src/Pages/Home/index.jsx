@@ -175,8 +175,8 @@ const Home = () => {
             </>
           }
         />
-        <div className="flex justify-center items-center mt-4">
-          <div className="text-white font-bold text-4xl md:text-6xl">
+       <div className="flex justify-center items-center mt-4">
+          <div className="text-yellow-400 font-regular text-2xl md:text-4xl drop-shadow-lg">
             <CountUp end={hitCount} duration={3} separator="," />
           </div>
         </div>
