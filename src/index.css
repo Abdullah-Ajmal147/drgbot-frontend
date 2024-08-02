@@ -274,12 +274,6 @@ span {
   color: #15133c;
 } */
 
-.card-button {
-  flex-direction: row;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
 .card-button a {
   color: #92b4ec;
   font-weight: 400;

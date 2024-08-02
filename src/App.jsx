@@ -7,6 +7,7 @@ import Preloader from "./Components/Common/Preloader";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can import the styles as well
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const [Loader, setLoader] = useState(true);
@@ -30,6 +31,7 @@ function App() {
         draggable={true}
       />
       <SpeedInsights />
+      <Analytics />
       <MainRouter />
     </>
   );

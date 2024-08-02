@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useGlobalContext } from "../../Api/context";
 import Search from "../Home/search";
 import parse from "html-react-parser";
 import { useNavigate } from "react-router-dom";
 import Layout from "../../Components/Layout";
+import { copyToClipBoard } from "../../Components/Functions/copyToClipboard";
 
 const Stories = () => {
   const navigate = useNavigate()
+  const contentRef = useRef();
+
   const { hits, isLoading, removePost } = useGlobalContext();
 
   if (isLoading) {
@@ -51,17 +54,20 @@ const Stories = () => {
             } = curPost;
             return (
               <div className="my-3" key={index}>
-                <div dangerouslySetInnerHTML={{ __html: convertTextToHtml(content) }} className="font-semibold md:text-2xl sm:text-xl text-lg text-white"></div>
+                <div ref={contentRef} dangerouslySetInnerHTML={{ __html: convertTextToHtml(content) }} className="font-semibold md:text-2xl sm:text-xl text-lg text-white"></div>
                 {/* <div className="font-semibold md:text-2xl sm:text-xl text-lg">
                 {parse(convertTextToHtml(`${content}`))}
               </div> */}
-                <div className="card-button">
-                  <a onClick={() => {
-                    navigate("/")
-                    removePost(index)
-                  }}>
-                    Back To Site
-                  </a>
+                <div className="flex justify-between gap-5 items-center mt-2">
+                  <div className="card-button">
+                    <a onClick={() => {
+                      navigate("/")
+                      removePost(index)
+                    }}>
+                      Back To Site
+                    </a>
+                  </div>
+                  <p className="text-lg cursor-pointer" onClick={() => { copyToClipBoard(contentRef) }}>Copy to clipboard</p>
                 </div>
               </div>
             );
